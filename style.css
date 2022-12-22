@@ -1,0 +1,667 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Unbounded:wght@300&display=swap');
+:root{
+    --main-color:rgb(233, 199, 31);
+}
+
+*{
+    font-family: 'Acme', sans-serif;
+    /* font-family: 'Unbounded', cursive; */
+    margin:0; padding:0;
+    text-decoration: none;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #222;
+}
+
+.header{
+    position: fixed;
+    top:0; left: 0; right: 0;
+    z-index: 10000;
+    background:#000;
+    opacity: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:4em 9%;
+}
+
+.header .logo{
+    color: var(--main-color);
+    font-size: 2.5em;
+}
+
+.header .navbar a{
+    text-transform: capitalize;
+    font-size: 2.3em;
+    color: var(--main-color);
+    margin-left: 2em;
+}
+
+.header .navbar a:hover{
+    color: var(--main-color);
+    text-decoration-line: underline;
+}
+
+#menu-bars{
+    font-size: 3em;
+    color:#fff;
+    cursor: pointer;
+    display:none;
+}
+
+.background-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(background.jpg);
+    width: 100%;
+    height: 80vh;
+    padding-top: 15em;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.background-content h1 span{
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black,2px 2px 2px var(--main-color),5px 5px 15px black;
+    animation-name: number1;
+    animation-duration: 2000ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}
+
+@keyframes number1{
+    from{
+        color: var(--main-color);
+        font-size: 1.8em;
+    }
+    to{
+        color:var(--main-color);
+        font-size: 1.5em;
+    }
+}
+
+.background-content h1{
+    font-weight: 100;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 4em;
+    text-shadow: 5px 5px 10px black;
+}
+
+.background-content p{
+    color:wheat;
+    font-size: 2.5em;
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
+    border: 2px solid var(--main-color);
+    padding: .15em;
+    border-radius: 25px;
+    text-align: center;
+    text-shadow: 5px 5px 10px black;
+}
+
+.background-content a{
+    display: flex;
+    justify-content: center;
+    width:6em;
+    margin:auto;
+    background-color:none;
+    text-align: center;
+    border: 2px solid black;
+    font-weight: bold;
+    padding: 1em;
+    border-radius: 15px;
+    color: black;
+    font-size: 1.5em;
+    animation: number2 2000ms ease 0ms 1 normal forwards;
+    transition: 0.5ms ease;
+}
+
+@keyframes number2{
+    from{
+        margin-top: 20vh;
+    }
+    to{
+        margin-top: auto;
+    }
+}
+
+.background-content a:hover{
+    border: 2px solid black;
+    background: black;
+    color: rgb(251, 248, 248);
+}
+
+.about{
+    border: 2px solid rgb(37, 37, 37);
+    border-radius: 4em;
+    border-width: 0.5em;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 10em;
+    background-color: rgb(24, 24, 24);
+}
+
+.about-content{
+    margin: auto;
+    width: fit-content;
+    border-radius:1em;
+    border-width: 0.1em;
+    text-align: justify;
+    font-weight: bold;
+    font-size: 2em;
+    color:var(--main-color);
+    position: relative;
+    padding: 1em;
+    margin-bottom: 1.5em;
+}
+
+.main-about{
+    margin: 0 6em 8em 6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    flex-wrap: wrap;
+    gap: 3em;
+}
+
+.about-icon{
+    width: 30em;
+    height: 20em;
+    margin: auto;
+}
+
+.about-icon img{
+    width: 100%;
+    height: 100%;
+    border-radius: 3em;
+}
+
+.about-icon .overlay{
+    position:relative;
+    margin: auto;
+    width:30em;
+    height: 20em;
+    margin-top:-20em;
+    border-radius: 3em;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    background:black;
+    cursor:pointer;
+    display: flex;
+    align-items: center;
+}
+
+.write{
+    position: relative;
+    font-size: 1.5em;
+    margin: auto;
+    color:var(--main-color);
+    text-align: center;
+}
+
+.about-icon:hover .overlay{
+    opacity: 0.8;
+}
+.imagesa:hover{
+    color: rgb(34, 218, 138);
+    text-decoration: underline;
+}
+
+.inner-about-content{
+    animation: number3 4000ms 0ms infinite normal forwards;
+    flex: 1 1 20em;
+    padding: 3em 3em;
+    padding-bottom: 0;
+    text-align: center;
+    border-color: antiquewhite;
+    border-radius: 4em;
+    box-shadow: 1em 1em 2em antiquewhite;
+    width:33em;
+    height: 50em;
+}
+
+@keyframes number3 {
+    0%{
+        border-color:antiquewhite;
+        box-shadow: 1em 1em 1.5em antiquewhite;
+    }
+    25%{
+        border-color: rgb(238, 238, 118);
+        box-shadow: 1em 1em 1.5em rgb(238, 238, 118);
+    }
+    50%{
+        border-color: greenyellow;
+        box-shadow: 1em 1em 1.5em greenyellow;
+    }
+    75%{
+        border-color: rgb(238, 238, 118);
+        box-shadow: 1em 1em 1.5em rgb(238, 238, 118);
+    }
+    100%{
+        border-color:antiquewhite;
+        box-shadow: 1em 1em 1.5em antiquewhite;
+    }
+}
+
+.inner-about-content h2{
+    font-size: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    color: var(--main-color);
+}
+
+.inner-about-content p{
+    font-size: 1.5em;
+    line-height: 2;
+    color: antiquewhite;
+    text-align: justify;
+}
+
+.about .box-container{
+    margin: 4em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27em, 1fr));
+    gap:1.5em;
+    margin-bottom: 10em;
+}
+
+.about .box-container .box{
+    border: 1em solid rgb(45, 44, 44);
+    border-radius: 2em;
+    box-shadow:2em 2em 2em rgb(45, 44, 44);
+    background:#333;
+    text-align: center;
+    padding:2.5em;
+}
+
+.service .box-container{
+    margin: 4em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27em, 1fr));
+    gap:1.5em;
+}
+
+.service .box-container .box{
+    border: 1em solid rgb(45, 44, 44);
+    border-radius: 2em;
+    box-shadow:2em 2em 2em rgb(45, 44, 44);
+    background:#333;
+    text-align: center;
+    padding:2.5em;
+}
+.heading{
+    text-align: center;
+    font-size: bold;
+    color: var(--main-color);
+    font-size: 4em;
+    margin-top: 1.5em;
+}
+.omega img{
+    width: 3em;
+}
+
+.service .box-container .box:hover{
+    border: 1em solid rgb(246, 246, 150);
+    border-radius: 2em;
+    box-shadow:2em 2em 2em rgb(246, 246, 150);
+    background:#333;
+    text-align: center;
+    padding:2.5rem;
+}
+
+.service .box-container .box:hover #myimg{
+    transform: scale(2);
+}
+
+.service .box-container .box:hover #myimg1{
+    transform: scale(2);
+}
+
+.service .box-container .box:hover #myimg2{
+    transform: scale(2);
+}
+
+.service .box-container .box:hover #myimg3{
+    transform: scale(2);
+}
+
+.service .box-container .box:hover #myimg4{
+    transform: scale(2);
+}
+
+.service .box-container .box h3{
+    font-size: 2em;
+    color:var(--main-color);
+    padding:1rem 0;
+}
+
+.service .box-container .box p{
+    font-size: 1.4em;
+    color:bisque;
+    line-height: 1.8;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100001; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 60em;
+  }
+  
+  /* Caption of Modal Image */
+  #caption1, #caption2, #caption3, #caption4, #caption5{
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: var(--main-color);
+    margin-top:2em;
+    height: 150px;
+    font-size: 2em;
+}
+  
+  /* Add Animation */
+  .modal-content, #caption1, #caption2, #caption3, #caption4, #caption5{  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+  }
+
+.dots{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10em;
+}
+
+.head1{
+    text-align: center;
+    font-weight: bold;
+    font-size:2.9em;
+    margin-top: 3em;
+    color:var(--main-color);
+}
+
+.slider{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2.5em;
+}
+
+.slider .slides{
+    transition: 0.25s;
+    display: none;
+}
+
+.slider .slides.active{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    opacity:1;
+}
+
+.slider .slides span img{
+    margin: 1em 1em;
+}
+
+.imagesc{
+    cursor:pointer;
+    border-radius: 0%;
+    width:33.5em;
+    transition-property: all;
+    transition-duration: 800ms;
+}
+
+.imagesc:hover{
+    border-radius: 3px;
+    transform: scale(1.2);
+}
+
+.dots .dot{
+    margin-top: 3em;
+    width: 1rem;
+    height: 1rem;
+    background: #333;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+.dots .dot.active{
+    background: white;
+}
+
+.rev-section{
+    border: 2px solid black;
+    border-radius: 23px;
+    background-color: #111;
+    margin-left:2%;
+    margin-right: 2%;
+    margin-top: -30px;
+    padding: 0 1rem;
+    text-align: center;
+    margin-bottom: 75px;
+  }
+  
+  .title{
+    padding-top: 15px;
+    font-size: 4rem;
+    color:var(--main-color);
+    margin-bottom: 2.5rem;
+  }
+  
+  .reviews{
+    margin: 2rem 2%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+  }
+  .review{
+    margin: 0 1rem;
+    min-width: 300px;
+    flex: 1;
+  }
+  
+  .head-review{
+    margin: 1.75rem auto;
+    width: 150px;
+    height: 150px;
+  }
+.head-review img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
+  }
+  
+  .body-review{
+    background-color: rgb(124, 124, 124);
+    padding: 2.5rem;
+    border-radius: 14px;
+  }
+  .name-review{
+    font-size: 2rem;
+    color: black;
+    font-weight: bold;
+    margin-bottom: .25rem;
+  }
+  .place-review{
+    font-size: 1.3rem;
+    color: black;
+    font-style: italic;
+  }
+  .rating{
+    color: black;
+    margin: 1rem 0;
+  }
+  .desc-review{
+    line-height: 1.5rem;
+    font-size: larger;
+    letter-spacing: 1px;
+    color: black;
+  }
+
+  .footer{
+    background:#111;
+}
+
+.footer .box-container{
+    margin-left: 5%;
+    padding: 4rem 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap:1.5rem;
+}
+
+.footer .box-container .box{
+    border: 1rem solid #111;
+    box-shadow: 1rem 1rem 1rem #111;
+}
+
+.footer .box-container .box h3{
+    font-size: 2.25rem;
+    padding:1rem 0;
+    color:var(--main-color);
+}
+
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.25rem;
+    padding:1rem 0;
+    color:var(--main-color);
+}
+
+.footer .box-container .box a i{
+    padding-right: .5rem;
+    color:var(--main-color);
+}
+
+.footer .box-container .box a:hover i{
+    padding-right: 1.5rem;
+    color:#fff;
+}
+
+.footer .credit{
+    text-align: center;
+    border-top: .1rem solid #222;
+    color:#fff;
+    padding:2rem;
+    padding-top: 2.5rem;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.footer .credit span{
+    color:var(--main-color);
+}
+
+
+@media (max-width:768px){
+
+    html{
+        font-size: 57%;
+    }
+
+    #menu-bars{
+        display: initial;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top:100%; left:0; right:0;
+        border-top: .1rem solid wheat;
+        background: rgb(24, 24, 24);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .fa-times{
+        transform: rotate(180deg);
+    }
+
+    .header .navbar a{
+        display: flex;
+        background: white;
+        border-radius: .5rem;
+        padding:1.3rem;
+        margin:1.3rem;
+        font-size: 2rem;
+    }
+
+    .home .content h3{
+        font-size: 4rem;
+    }
+
+    .background-content a{
+        margin-left: 40%;
+    }
+
+}
